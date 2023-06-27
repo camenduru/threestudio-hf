@@ -1,0 +1,3 @@
+[submodule "threestudio"]
+	path = threestudio
+	url = https://github.com/threestudio-project/threestudio.git
