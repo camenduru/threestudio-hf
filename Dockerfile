@@ -57,4 +57,8 @@ RUN pip install git+https://github.com/NVlabs/tiny-cuda-nn.git#subdirectory=bind
 
 COPY requirements.txt /tmp
 RUN cd /tmp && pip install -r requirements.txt
+
+RUN git clone https://github.com/threestudio-project/threestudio.git /home/${USER_NAME}/threestudio
 WORKDIR /home/${USER_NAME}/threestudio
+RUN git checkout 5a25bad
+CMD ["python", "gradio_app.py", "launch", "--listen"]
