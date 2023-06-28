@@ -1,11 +1,9 @@
 ---
-title: Threestudio
+title: threestudio
 emoji: ⚡
 colorFrom: yellow
 colorTo: gray
-sdk: gradio
-sdk_version: 3.35.2
-app_file: app.py
+sdk: docker
 pinned: false
 license: apache-2.0
 ---
