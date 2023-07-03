@@ -58,6 +58,8 @@ RUN pip install git+https://github.com/NVlabs/tiny-cuda-nn.git#subdirectory=bind
 COPY requirements.txt /tmp
 RUN cd /tmp && pip install -r requirements.txt
 
+# avoid caching the old version
+ADD "https://api.github.com/repos/threestudio-project/threestudio/commits?per_page=1" latest_commit
 RUN git clone https://github.com/threestudio-project/threestudio.git /home/${USER_NAME}/threestudio
 WORKDIR /home/${USER_NAME}/threestudio
 RUN git checkout c2f4c21
