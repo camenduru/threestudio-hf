@@ -60,5 +60,5 @@ RUN cd /tmp && pip install -r requirements.txt
 
 RUN git clone https://github.com/threestudio-project/threestudio.git /home/${USER_NAME}/threestudio
 WORKDIR /home/${USER_NAME}/threestudio
-RUN git checkout 5a25bad
-CMD ["python", "gradio_app.py", "launch", "--listen"]
+RUN git checkout c2f4c21
+CMD ["python", "gradio_app.py", "launch", "--listen", "--hf-space"]
